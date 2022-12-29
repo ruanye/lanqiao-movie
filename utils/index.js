@@ -61,7 +61,9 @@ const goToPage = async (
   page.setDefaultTimeout(10000);
   await page.setViewport(viewport);
   const queryStr = Object.keys(query).length ? `?${qs.stringify(query)}` : "";
-  const nativeUrl = `${host}${url}.html${queryStr}`;
+  let  nativeLink = url?url:'index'
+  const nativeUrl = `${host}${nativeLink}.html${queryStr}`;
+  console.log(nativeUrl)
   const hashUrl = `${host}#/${url}${queryStr}`;
   // const isFramework = shell.exec("cat /home/project/package.json | grep -E 'vue|react'");
   isFramework = true;

@@ -14,9 +14,7 @@ const test = async () => {
   const page = await goToPage(browser, {
     url: "cinemaDetail",
     query: {
-      cinemaId: 4,
-      movieId: 168,
-      time: 1663776000000,
+      movieId: 168
     },
   });
   const tabList = await page.$$(".tab-item");
