@@ -22,12 +22,14 @@ const test = async () => {
   await buyButton.click();
   await sleep(500);
   const url = new URL(page.url());
+  console.log(url,'2222')
+
   const queryString = url.href.split("?")[1] || "";
   const params = new URLSearchParams(queryString);
+  console.log(params,'2222')
   if (
     !url.href.includes("/cinemaDetail") ||
-    params.get("cinemaId") !== "4" ||
-    params.get("time") !== "1663776000000"
+    params.get("movieId") !== "168" 
   ) {
     writeScore(3, "跳转到影院详情页失败");
     return;

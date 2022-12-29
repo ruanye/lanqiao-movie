@@ -42,8 +42,8 @@ const writeScoreFn = scoreObj => {
     writeScore(obj);
     if (errorMsg) {
       console.error(errorMsg);
+      process.exit();
     }
-    process.exit();
   };
 };
 

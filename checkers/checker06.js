@@ -13,13 +13,12 @@ const test = async () => {
   const browser = await runBrowser();
   const page = await goToPage(browser, {
     url: "cinemaDetail",
-    query: {
-      cinemaId: 4,
+    query: { 
       movieId: 168,
-      time: 1663776000000,
     },
   });
   const movieNameEl = await page.$(".movie-name");
+  
   if (!movieNameEl) {
     writeScore(0, "无法找到电影名称");
   }
@@ -48,10 +47,12 @@ const test = async () => {
   if (date !== "9月22日") {
     writeScore(1, "起始日期不正确");
   }
-  if (tabList.length < 7) {
+  if (tabList.length !== 3) {
     writeScore(1, "选项卡数量不正确");
   }
   console.log("测试通过");
   writeScore(5);
+  await browser.close()
+
 };
 test();

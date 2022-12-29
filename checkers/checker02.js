@@ -13,8 +13,7 @@ const writeScore = writeScoreFn(scoreObj);
 const test = async () => {
   const browser = await runBrowser();
   const page = await goToPage(browser);
-  let movieItem = page.$$('.movie-item')
-  console.log(movieItem.length)
+  let movieItem =await page.$$('.movie-item')
   if(!movieItem||!movieItem.length){
     process.exit(1)
   }

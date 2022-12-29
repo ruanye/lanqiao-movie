@@ -22,7 +22,7 @@ const test = async () => {
   const secondTab = tabs[1];
   await secondTab.click();
   try {
-    await page.waitForResponse(response => response.url().includes("/movie/recent"), {
+   let res =  await page.waitForResponse(response => response.url().includes("/movie/recent"), {
       timeout: 2000,
     });
   } catch (e) {

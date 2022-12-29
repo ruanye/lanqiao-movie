@@ -14,9 +14,7 @@ const test = async () => {
   const page = await goToPage(browser, {
     url: "cinemaDetail",
     query: {
-      cinemaId: 4,
-      movieId: 168,
-      time: 1663776000000,
+      movieId: 168
     },
   });
   const buyButtonEl = await page.$(".buy-button");
@@ -31,5 +29,6 @@ const test = async () => {
   }
   console.log("测试通过");
   writeScore(5);
+  await browser.close()
 };
 test();

@@ -12,11 +12,7 @@ const writeScore = writeScoreFn(scoreObj);
 const test = async () => {
   const browser = await runBrowser();
   const page = await goToPage(browser, {
-    url: "seat",
-    query: {
-      id: 1278,
-      movieId: 168,
-    },
+    url: "seat"
   });
   const unSelectorSeatEls = await page.$$(".seat-selector-room-key");
   const buyButtonEl = await page.$(".buy-button");
@@ -42,5 +38,6 @@ const test = async () => {
   }
   console.log("测试通过");
   writeScore(5);
+  await  browser.close()
 };
 test();

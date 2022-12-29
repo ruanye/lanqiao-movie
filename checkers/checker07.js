@@ -37,5 +37,6 @@ const test = async () => {
   }
   console.log("测试通过");
   writeScore(5);
+  await browser.close()
 };
 test();
