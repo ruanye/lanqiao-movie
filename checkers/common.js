@@ -9,7 +9,11 @@
  * @param {*} index  传入的座位索引
  */
 const getSeatPosition = (index) => {
-  throw Error('222')
+  let seatPos = index+1
+  let first = Math.ceil(seatPos/9);
+  let second = seatPos -((first-1)*9)
+ 
+ return `${first}-${second}`
 };
 
 

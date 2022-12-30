@@ -2,7 +2,7 @@
 console.log("检测独立封装常用工具方法");
 let getSeatPosition;
 try{
-   getSeatPosition = require("./common.js");
+   getSeatPosition = require("./common");
 }catch(e){
   console.log('引入时发生了错误')
 }
@@ -37,9 +37,12 @@ try {
     let isFnRight = res.every(item=>item===true)
     if (isFnRight) {
       console.log("检测通过");
+    }else{
+      console.log(isFnRight)
+      console.log("检测未通过");
     }
   }
 } catch (err) {
-  console.log('发生了错误--------------------------------')
+  console.log('发生了错误--------------------------------',err)
   process.exit(1); // 结束进程，检测失败
 }

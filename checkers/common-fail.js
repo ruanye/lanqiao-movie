@@ -8,7 +8,7 @@
  * @param {*} index  传入的座位索引
  */
 const getSeatPostion = (index) => {
-  
+    return `1`
 };
 
 module.exports = getSeatPostion;
