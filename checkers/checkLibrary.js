@@ -5,7 +5,7 @@ const shell = require("shelljs");
 const { writeScoreFn} = require("../utils/writeScore");
 let fs = require("fs");
 let path = require("path");
-const pageURL = "http://localhost:8081/";
+const pageURL = "http://localhost:8080/";
 const ajax_skill_point_id = 1808;
 const scoreObj = {
   skill_point_id: 1826,
@@ -14,7 +14,6 @@ const scoreObj = {
   user_score: 0,
   skill_score: 5,
   passed_score: 5,
-  push_at: null,
   passed: false,
 };
 const writeScore = writeScoreFn(scoreObj);
@@ -41,8 +40,6 @@ try {
       "cat /home/project/package.json | grep -E 'vue|react'"
     );
     let isHash = res.code == 0;
-    // console.log(isHash);
-
     if (!isHash) {
       // 如果使用原生开发
       const pageContent = await page.content(); // 获取首页内容
