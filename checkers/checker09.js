@@ -10,12 +10,12 @@ const scoreObj = {
 };
 const writeScore = writeScoreFn(scoreObj);
 const test = async () => {
-  const getSeatSelected = async seatEl => {
-    return await seatEl.evaluate(el => el.classList.contains("selected"));
+  const getSeatSelected = async (seatEl) => {
+    return await seatEl.evaluate((el) => el.classList.contains("selected"));
   };
   const browser = await runBrowser();
   const page = await goToPage(browser, {
-    url: "seat"
+    url: "seat",
   });
   const unSelectorSeatEls = await page.$$(".seat-selector-room-key");
   if (!unSelectorSeatEls?.length) {
@@ -33,7 +33,6 @@ const test = async () => {
   if (seatChunkEl?.length !== 1) {
     writeScore(0, "座位信息块未正确渲染");
   }
-
   await selectedSeat.click();
   if (await getSeatSelected(selectedSeat)) {
     writeScore(2, "座位未取消选中");
@@ -54,6 +53,15 @@ const test = async () => {
   if ((await page.$$(".select-info-card-seat-chunk"))?.length) {
     writeScore(3, "点击座位简介卡关闭后未删除座位简介卡");
   }
+  let selectedSeat2 = unSelectorSeatEls[11];
+  await selectedSeat2.click();
+  let seatChunkElText = await page.$$eval(
+    ".select-info-card-seat-chunk",
+    (el) => el.map((item) => item.innerText)
+  );
+   if(seatChunkElText?.length&&seatChunkElText[0]?.includes('2排3座')){
+      console.log('座位简介卡文字显示正确')
+   }
   console.log("测试通过");
   writeScore(5);
   await browser.close();

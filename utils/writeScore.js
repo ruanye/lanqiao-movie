@@ -47,4 +47,15 @@ const writeScoreFn = scoreObj => {
   };
 };
 
-module.exports = { writeScore, writeScoreFn };
+function writeLog(err) {
+  fs.appendFileSync(
+    path.join(fs.realpathSync(process.cwd()), `./log.txt`),
+    `${err}` + "\n",
+    "utf8",
+    (err) => {
+      if (err) console.log("脚本运行错误");
+    }
+  );
+}
+
+module.exports = { writeScore, writeScoreFn,writeLog};
