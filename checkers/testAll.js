@@ -3,7 +3,7 @@ const shell = require("shelljs");
 let path = require("path");
 let request = require("request");
 let { toCheck } = require("./testFn.js");
-let { writeLog } = require("./writeScore.js");
+const { writeLog } = require("../utils/writeScore");
 const nowDate = new Date();
 
 const devPathUser = "https://staging.shiyanlou.com"; // 测试接口域名

@@ -26,24 +26,8 @@ const waitForSomething = async ({ func, timeout }, sleepTime) => {
 const runBrowser = async () => {
   return await puppeteer.launch({ 
     args: ["--no-sandbox", "--disable-setuid-sandbox"] ,
-    headless:false
   });
 };
-
-// const isReactOrVue = () => {
-//   if (Array.from(document.querySelectorAll("*")).some(e => e._reactRootContainer !== undefined))
-//     return true;
-//   const all = document.querySelectorAll("*");
-//   let el;
-//   for (let i = 0; i < all.length; i++) {
-//     if (all[i].__vue__) {
-//       el = all[i];
-//       break;
-//     }
-//   }
-//   return !!el;
-// };
-
 const goToPage = async (
   browser,
   {
@@ -63,11 +47,9 @@ const goToPage = async (
   const queryStr = Object.keys(query).length ? `?${qs.stringify(query)}` : "";
   let  nativeLink = url?url:'index'
   const nativeUrl = `${host}${nativeLink}.html${queryStr}`;
-  console.log(nativeUrl)
   const hashUrl = `${host}#/${url}${queryStr}`;
   // const isFramework = shell.exec("cat /home/project/package.json | grep -E 'vue|react'");
   isFramework = true;
-  console.log(hashUrl,'hashUrl')
   if (isFramework) {
     await page.goto(hashUrl, {
       waitUntil: "networkidle2",

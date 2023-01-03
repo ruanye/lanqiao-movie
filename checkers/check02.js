@@ -2,8 +2,8 @@ const { runBrowser, goToPage, sleep } = require("../utils");
 const { writeScoreFn } = require("../utils/writeScore");
 
 const scoreObj = {
-  skill_point_id: 3,
-  title: "蓝桥电影",
+  skill_point_id:1804,
+  title: "JavaScript、ES6 基础语法",
   checker: "检测首页“正在热映”/“即将上映”的Tab切换",
   user_score: 0,
   skill_score: 5,
@@ -41,5 +41,6 @@ const test = async () => {
   }
   console.log("测试通过");
   writeScore(5);
+  await browser.close();
 };
 test();

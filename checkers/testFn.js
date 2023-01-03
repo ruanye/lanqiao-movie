@@ -1,12 +1,12 @@
 const shell = require("shelljs");
-let { writeScore, writeLog } = require("./writeScore.js");
+const { writeScore,writeLog } = require("../utils/writeScore");
 const nowDate = new Date();
 
 const toCheck = () => {
   // 1. 检测项目是否能正常访问
   writeLog("1. 检测项目是否能正常访问。");
   let res = shell.exec("curl 0.0.0.0:8080");
-  console.log(1, res.code);
+  console.log('1.检测项目是否能正常访问',res.code);
   if (res.code !== 0) {
     // shell 未运行成功
     console.error("项目不能通过 8080 端口访问");
@@ -24,6 +24,26 @@ const toCheck = () => {
     writeLog("检测项目是否能正常访问成功！");
   }
 
+  // 2. 检测首页功能1数据的请求与渲染
+   
+  let res2 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check01.js"
+  );
+  writeLog('检测首页功能1数据的请求与渲染',res2.code);
+  if (res2.code !== 0) {
+    writeScore({
+      skill_point_id: 1808,
+      title: "AJAX操作",
+      checker: "首页“正在热映”数据读取加载",
+      user_score: 0,
+      skill_score: 10,
+      passed_score: 5,
+      push_at: parseInt(nowDate.getTime() / 1000),
+      passed: false,
+    });
+    writeLog("testFn中check01.js 检测首页功能 1 数据的请求与渲染脚本执行失败");
+  }
+  
 
   // 12. 检测版本控制
   res = shell.exec(
