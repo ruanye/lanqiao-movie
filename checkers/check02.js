@@ -2,9 +2,9 @@ const { runBrowser, goToPage, sleep } = require("../utils");
 const { writeScoreFn } = require("../utils/writeScore");
 
 const scoreObj = {
-  skill_point_id:1804,
-  title: "JavaScript、ES6 基础语法",
-  checker: "检测首页“正在热映”/“即将上映”的Tab切换",
+  skill_point_id:1808,
+  title: "AJAX操作",
+  checker: "首页Tab切换",
   user_score: 0,
   skill_score: 5,
   passed_score: 5,

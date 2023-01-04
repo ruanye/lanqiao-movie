@@ -1,8 +1,8 @@
 const { runBrowser, goToPage, getTextByEl, sleep } = require("../utils");
 const { writeScoreFn } = require("../utils/writeScore");
 const scoreObj = {
-  skill_point_id: 7,
-  title: "蓝桥电影",
+  skill_point_id: 1808,
+  title: "AJAX操作",
   checker: "检测“点击不同日期选项卡后正确渲染”",
   user_score: 0,
   skill_score: 5,

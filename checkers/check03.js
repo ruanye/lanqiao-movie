@@ -4,7 +4,7 @@ const { writeScoreFn } = require("../utils/writeScore");
 const scoreObj = {
   skill_point_id: 1804,
   title: "JavaScript、ES6 基础语法",
-  checker: "检测首页“滚动加载”",
+  checker: "首页滚动加载",
   user_score: 0,
   skill_score: 5,
   passed_score: 5,
@@ -12,7 +12,7 @@ const scoreObj = {
 const scoreObj2 = {
   skill_point_id: 1808,
   title: "AJAX 操作",
-  checker: "检测首页“滚动加载”",
+  checker: "首页滚动加载",
   user_score: 0,
   skill_score: 5,
   passed_score: 5,

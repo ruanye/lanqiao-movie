@@ -6,8 +6,8 @@ const scoreObj = {
   title: "静态页面布局",
   checker: "订单详情页”的静态布局还原度",
   user_score: 0,
-  skill_score: 5,
-  passed_score: 5,
+  skill_score: 10,
+  passed_score: 10,
 };
 const getRenderDiff = async () => {
   const browser = await runBrowser();
@@ -27,7 +27,7 @@ const getRenderDiff = async () => {
     process.exit(1);
     return;
   }
-  scoreObj.user_score = 5 * ((100 - diff) / 100);
+  scoreObj.user_score = 10 * ((100 - diff) / 100);
   writeScore(scoreObj);
   browser.close();
 };

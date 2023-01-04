@@ -1,9 +1,9 @@
 const { runBrowser, goToPage, getTextByEl } = require("../utils");
 const { writeScoreFn } = require("../utils/writeScore");
 const scoreObj = {
-  skill_point_id: 6,
-  title: "蓝桥电影",
-  checker: "检测“排片列表页正常加载”",
+  skill_point_id: 1808,
+  title: "AJAX 操作",
+  checker: "排片列表页面影院电影",
   user_score: 0,
   skill_score: 5,
   passed_score: 5,
@@ -42,13 +42,6 @@ const test = async () => {
   const sessionList = await page.$$(".session-price");
   if (sessionList?.length !== 3) {
     writeScore(0, "未找到标记4（场次价格）");
-  }
-  const date = await getTextByEl(tabList[0]);
-  if (date !== "9月22日") {
-    writeScore(1, "起始日期不正确");
-  }
-  if (tabList.length !== 3) {
-    writeScore(1, "选项卡数量不正确");
   }
   console.log("测试通过");
   writeScore(5);

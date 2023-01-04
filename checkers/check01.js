@@ -5,7 +5,7 @@ const { writeScoreFn } = require("../utils/writeScore");
 const scoreObj = {
   skill_point_id: 1808,
   title: "AJAX 操作",
-  checker: "首页“正在热映”数据读取加载",
+  checker: "首页正在热映数据渲染",
   user_score: 0,
   skill_score: 5,
   passed_score: 5,
@@ -19,8 +19,6 @@ let timeOut = setTimeout(() => {
   clearTimeout(timeOut);
   process.exit(1);
 }, 30000);
-
-
 const test = async () => {
   const browser = await runBrowser();
   const page = await goToPage(browser);

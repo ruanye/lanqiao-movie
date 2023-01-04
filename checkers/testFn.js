@@ -1,6 +1,6 @@
 const shell = require("shelljs");
 const { writeScore,writeLog } = require("../utils/writeScore");
-const nowDate = new Date();
+const {getTimestamp} =require('../utils/index')
 
 const toCheck = () => {
   // 1. 检测项目是否能正常访问
@@ -18,7 +18,7 @@ const toCheck = () => {
       user_score: 5,
       skill_score: 5,
       passed_score: 5,
-      push_at: parseInt(nowDate.getTime() / 1000),
+      push_at:getTimestamp(),
       passed: true,
     });
     writeLog("检测项目是否能正常访问成功！");
@@ -26,24 +26,70 @@ const toCheck = () => {
 
   // 2. 检测首页功能1数据的请求与渲染
    
-  let res2 = shell.exec(
+  let res1 = shell.exec(
     "/usr/sbin/nodejs/bin/node check01.js"
   );
-  writeLog('检测首页功能1数据的请求与渲染',res2.code);
+  writeLog('首页正在热映数据渲染',res1.code);
+  if (res1.code !== 0) {
+    writeScore({
+      skill_point_id: 1808,
+      title: "AJAX操作",
+      checker: "首页正在热映数据渲染",
+      user_score: 0,
+      skill_score: 5,
+      passed_score: 5,
+      push_at: parseInt(nowDate.getTime() / 1000),
+      passed: false,
+    });
+    writeLog("首页正在热映数据渲染检测未通过");
+  }
+  
+  let res2 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check02.js"
+  );
+  writeLog('首页Tab切换',res2.code);
   if (res2.code !== 0) {
     writeScore({
       skill_point_id: 1808,
       title: "AJAX操作",
-      checker: "首页“正在热映”数据读取加载",
+      checker: "首页Tab切换",
+      user_score: 0,
+      skill_score: 5,
+      passed_score: 5,
+      push_at: parseInt(nowDate.getTime() / 1000),
+      passed: false,
+    });
+    writeLog("首页Tab切换未通过");
+  }
+
+  let res3 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check02.js"
+  );
+  writeLog('首页Tab切换',res3.code);
+  if (res3.code !== 0) {
+    writeScore({
+      skill_point_id: 1808,
+      title: "AJAX操作",
+      checker: "首页滚动加载",
       user_score: 0,
       skill_score: 10,
       passed_score: 5,
       push_at: parseInt(nowDate.getTime() / 1000),
       passed: false,
     });
-    writeLog("testFn中check01.js 检测首页功能 1 数据的请求与渲染脚本执行失败");
+    writeScore({
+      skill_point_id: 1804,
+      title: "JavaScript、ES6 基础语法",
+      checker: "首页滚动加载",
+      user_score: 0,
+      skill_score: 5,
+      passed_score: 5,
+      push_at: parseInt(nowDate.getTime() / 1000),
+      passed: false,
+    });
+    writeLog("首页Tab切换未通过");
   }
-  
+
 
   // 12. 检测版本控制
   res = shell.exec(

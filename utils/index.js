@@ -25,7 +25,7 @@ const waitForSomething = async ({ func, timeout }, sleepTime) => {
 
 const runBrowser = async () => {
   return await puppeteer.launch({ 
-    args: ["--no-sandbox", "--disable-setuid-sandbox"] ,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"] 
   });
 };
 const goToPage = async (

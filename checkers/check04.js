@@ -2,8 +2,8 @@ const { runBrowser, goToPage, sleep } = require("../utils");
 const { writeScoreFn } = require("../utils/writeScore");
 
 const scoreObj = {
-  skill_point_id: 5,
-  title: "蓝桥电影",
+  skill_point_id: 1804,
+  title: "JavaScript、ES6 基础语法",
   checker: "点击购票跳转",
   user_score: 0,
   skill_score: 5,
