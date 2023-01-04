@@ -24,9 +24,8 @@ const test = async () => {
   const page = await goToPage(browser);
   let movieItem = await page.$$(".best-movie-item");
   if (!movieItem || !movieItem.length) {
-    writeScore(0,`没有找到 .best-movie-item 命名的元素`);
     clearTimeout(timeOut);
-    process.exit(1);
+    writeScore(0,`没有找到 .best-movie-item 命名的元素`);
   }
   const movieItemList = await page.$$(".best-movie-item");
   if (!movieItemList?.length) {

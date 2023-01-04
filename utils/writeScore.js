@@ -42,7 +42,7 @@ const writeScoreFn = scoreObj => {
     writeScore(obj);
     if (errorMsg) {
       writeLog(errorMsg);
-      process.exit();
+      process.exit(1);
     }
   };
 };

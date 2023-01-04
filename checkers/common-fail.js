@@ -7,8 +7,8 @@
  * 传入 11 则返回 2-2，以此类推
  * @param {*} index  传入的座位索引
  */
-const getSeatPostion = (index) => {
+const getSeatPosition = (index) => {
     return `1`
 };
 
-module.exports = getSeatPostion;
+module.exports = getSeatPosition;

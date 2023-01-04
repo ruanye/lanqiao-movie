@@ -1,6 +1,13 @@
 const { runBrowser, goToPage, sleep } = require("../utils");
 const { writeScoreFn } = require("../utils/writeScore");
 
+// 判题超时设置，成功或者失败时需要清除
+let timeOut = setTimeout(() => {
+  writeScore(0,`检测脚本超时`);
+  clearTimeout(timeOut);
+  process.exit(1);
+}, 30000);
+
 const scoreObj = {
   skill_point_id: 1804,
   title: "JavaScript、ES6 基础语法",
@@ -32,6 +39,7 @@ const test = async () => {
       timeout: 2000,
     });
   } catch (e) {
+    clearTimeout(timeOut);
     writeScore(0, "滚动到底没有加载更多数据");
     writeScore2(0, "滚动到底没有加载更多数据")
     return;
@@ -39,11 +47,13 @@ const test = async () => {
   await sleep(500);
   const moreMovieItemList = await page.$$(".movie-item");
   if (moreMovieItemList?.length !== 20) {
+    clearTimeout(timeOut);
     writeScore(0, "加载更多数据后电影列表数量不正确");
     writeScore2(0, "加载更多数据后电影列表数量不正确")
     return;
   }
   console.log("测试通过");
+  clearTimeout(timeOut);
   writeScore(5);
   writeScore2(5);
   await browser.close();

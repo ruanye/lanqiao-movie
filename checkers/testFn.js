@@ -63,23 +63,13 @@ const toCheck = () => {
   }
 
   let res3 = shell.exec(
-    "/usr/sbin/nodejs/bin/node check02.js"
+    "/usr/sbin/nodejs/bin/node check03.js"
   );
-  writeLog('首页Tab切换',res3.code);
+  writeLog('首页滚动加载',res3.code);
   if (res3.code !== 0) {
     writeScore({
       skill_point_id: 1808,
       title: "AJAX操作",
-      checker: "首页滚动加载",
-      user_score: 0,
-      skill_score: 10,
-      passed_score: 5,
-      push_at: parseInt(nowDate.getTime() / 1000),
-      passed: false,
-    });
-    writeScore({
-      skill_point_id: 1804,
-      title: "JavaScript、ES6 基础语法",
       checker: "首页滚动加载",
       user_score: 0,
       skill_score: 5,
@@ -87,8 +77,89 @@ const toCheck = () => {
       push_at: parseInt(nowDate.getTime() / 1000),
       passed: false,
     });
+  }
+
+
+  let res4 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check04.js"
+  );
+  writeLog('首页Tab切换',res4.code);
+  if (res4.code !== 0) {
+    writeScore();
     writeLog("首页Tab切换未通过");
   }
+
+  let res5 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check04.js"
+  );
+  writeLog('首页Tab切换',res5.code);
+  if (res5.code !== 0) {
+    writeScore();
+    writeLog("首页Tab切换未通过");
+  }
+
+
+  let res6 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check04.js"
+  );
+  writeLog('首页Tab切换',res6.code);
+  if (res6.code !== 0) {
+    writeScore();
+    writeLog("首页Tab切换未通过");
+  }
+
+
+  let res7 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check04.js"
+  );
+  writeLog('首页Tab切换',res6.code);
+  if (res7.code !== 0) {
+    writeScore();
+    writeLog("首页Tab切换未通过");
+  }
+
+
+  let res8 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check04.js"
+  );
+  writeLog('首页Tab切换',res6.code);
+  if (res8.code !== 0) {
+    writeScore();
+    writeLog("首页Tab切换未通过");
+  }
+
+  let res9 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check04.js"
+  );
+  writeLog('首页Tab切换',res6.code);
+  if (res9.code !== 0) {
+    writeScore();
+    writeLog("首页Tab切换未通过");
+  }
+
+
+  let res12 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check04.js"
+  );
+  writeLog('首页Tab切换',res12.code);
+  if (res12.code !== 0) {
+    writeScore();
+    writeLog("首页Tab切换未通过");
+  }
+
+
+
+
+  let res13 = shell.exec(
+    "/usr/sbin/nodejs/bin/node check04.js"
+  );
+  writeLog('首页Tab切换',res13.code);
+  if (res13.code !== 0) {
+    writeScore();
+    writeLog("首页Tab切换未通过");
+  }
+
+  
 
 
   // 12. 检测版本控制
