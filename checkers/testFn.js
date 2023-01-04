@@ -85,78 +85,152 @@ const toCheck = () => {
   );
   writeLog('首页Tab切换',res4.code);
   if (res4.code !== 0) {
-    writeScore();
-    writeLog("首页Tab切换未通过");
+    writeScore(
+      {
+        skill_point_id: 1804,
+        title: "JavaScript、ES6 基础语法",
+        checker: "首页点击购票跳转",
+        mark_id:1,
+        user_score: 0,
+        skill_score: 10,
+        passed_score: 5,
+        push_at: parseInt(nowDate.getTime() / 1000),
+        passed: false,
+      }
+    );
+    writeLog("首页点击购票跳转");
   }
 
   let res5 = shell.exec(
     "/usr/sbin/nodejs/bin/node check04.js"
   );
-  writeLog('首页Tab切换',res5.code);
+  writeLog('排片列表页面影院电影渲染',res5.code);
   if (res5.code !== 0) {
-    writeScore();
-    writeLog("首页Tab切换未通过");
+    writeScore({
+      skill_point_id: 1808,
+      title: "AJAX操作",
+      checker: "排片列表页面影院电影渲染",
+      user_score: 0,
+      skill_score: 10,
+      passed_score: 5,
+      mark_id:2,
+      push_at: parseInt(nowDate.getTime() / 1000),
+      passed: false,
+    });
+    writeLog("排片列表页面影院电影渲染未通过");
   }
 
 
   let res6 = shell.exec(
-    "/usr/sbin/nodejs/bin/node check04.js"
+    "/usr/sbin/nodejs/bin/node check06.js"
   );
-  writeLog('首页Tab切换',res6.code);
+  writeLog('排片列表默认排片数据渲染',res6.code);
   if (res6.code !== 0) {
-    writeScore();
-    writeLog("首页Tab切换未通过");
+    writeScore({
+      skill_point_id: 1808,
+      title: "AJAX操作",
+      checker: "排片列表默认排片数据渲染",
+      user_score: 0,
+      mark_id:2,
+      skill_score: 10,
+      passed_score: 5,
+      push_at: parseInt(nowDate.getTime() / 1000),
+      passed: false
+    });
+    writeLog("排片列表默认排片数据渲染未通过");
   }
 
 
   let res7 = shell.exec(
-    "/usr/sbin/nodejs/bin/node check04.js"
+    "/usr/sbin/nodejs/bin/node check07.js"
   );
-  writeLog('首页Tab切换',res6.code);
+  writeLog('点击日期选项卡后正确渲染”',res7.code);
   if (res7.code !== 0) {
-    writeScore();
-    writeLog("首页Tab切换未通过");
+    writeScore({
+      skill_point_id: 1808,
+      title: "AJAX操作",
+      checker: "点击日期选项卡后正确渲染”",
+      mark_id:3,
+      user_score: 0,
+      skill_score: 10,
+      passed_score: 5,
+      push_at: parseInt(nowDate.getTime() / 1000),
+      passed: false
+    });
+    writeLog("点击日期选项卡后正确渲染”");
   }
 
 
   let res8 = shell.exec(
-    "/usr/sbin/nodejs/bin/node check04.js"
+    "/usr/sbin/nodejs/bin/node check08.js"
   );
-  writeLog('首页Tab切换',res6.code);
+  writeLog('点击购票跳转至选座页面',res8.code);
   if (res8.code !== 0) {
-    writeScore();
-    writeLog("首页Tab切换未通过");
+    writeScore({
+      skill_point_id: 1804,
+      title: "JavaScript、ES6 基础语法",
+      checker: "点击购票跳转至选座页面",
+      mark_id:1,
+      user_score: 0,
+      skill_score: 10,
+      passed_score: 5,
+      push_at: parseInt(nowDate.getTime() / 1000),
+      passed: false
+    });
+    writeLog("点击购票跳转至选座页面未通过");
   }
 
   let res9 = shell.exec(
-    "/usr/sbin/nodejs/bin/node check04.js"
+    "/usr/sbin/nodejs/bin/node check09.js"
   );
-  writeLog('首页Tab切换',res6.code);
+  writeLog('座位的选中与显示',res9.code);
   if (res9.code !== 0) {
-    writeScore();
-    writeLog("首页Tab切换未通过");
+    writeScore({
+      skill_point_id: 1804,
+      title: "JavaScript、ES6 基础语法",
+      checker: "座位的选中与显示",
+      user_score: 0,
+      skill_score: 10,
+      passed_score: 5,
+      push_at: parseInt(nowDate.getTime() / 1000),
+      passed: false
+    });
+    writeLog("座位的选中与显示");
   }
-
+  
 
   let res12 = shell.exec(
-    "/usr/sbin/nodejs/bin/node check04.js"
+    "/usr/sbin/nodejs/bin/node check12.js"
   );
-  writeLog('首页Tab切换',res12.code);
+  writeLog('点击确认选座跳转',res12.code);
   if (res12.code !== 0) {
-    writeScore();
-    writeLog("首页Tab切换未通过");
+    writeScore({
+      skill_point_id: 1804,
+      title: "JavaScript、ES6 基础语法",
+      checker: "点击确认选座跳转",
+      user_score: 0,
+      skill_score: 10,
+      passed_score: 5,
+      markId:1  
+    });
+    writeLog("点击确认选座跳转");
   }
-
-
 
 
   let res13 = shell.exec(
-    "/usr/sbin/nodejs/bin/node check04.js"
+    "/usr/sbin/nodejs/bin/node check13.js"
   );
-  writeLog('首页Tab切换',res13.code);
+  writeLog('订单详情页的静态布局',res13.code);
   if (res13.code !== 0) {
-    writeScore();
-    writeLog("首页Tab切换未通过");
+    writeScore({
+      skill_point_id: 1798,
+      title: "静态页面布局",
+      checker: "订单详情页的静态布局",
+      user_score: 0,
+      skill_score: 10,
+      passed_score: 10,
+    });
+    writeLog("订单详情页的静态布局未通过");
   }
 
   
