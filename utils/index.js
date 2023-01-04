@@ -40,7 +40,7 @@ const goToPage = async (
     },
   } = {},
 ) => {
-  const host = "http://localhost:8081/";
+  const host = "http://localhost:8080/";
   const page = await browser.newPage();
   page.setDefaultTimeout(10000);
   await page.setViewport(viewport);
@@ -48,8 +48,7 @@ const goToPage = async (
   let  nativeLink = url?url:'index'
   const nativeUrl = `${host}${nativeLink}.html${queryStr}`;
   const hashUrl = `${host}#/${url}${queryStr}`;
-  // const isFramework = shell.exec("cat /home/project/package.json | grep -E 'vue|react'");
-  isFramework = true;
+ const isFramework = shell.exec("cat /home/project/package.json | grep -E 'vue|react'");
   if (isFramework) {
     await page.goto(hashUrl, {
       waitUntil: "networkidle2",

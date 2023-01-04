@@ -10,11 +10,12 @@ let timeOut = setTimeout(() => {
 
 const scoreObj = {
   skill_point_id: 1808,
-  title: "AJAX 操作",
+  title: "AJAX操作",
   checker: "排片列表页面影院电影渲染",
   user_score: 0,
-  skill_score: 5,
+  skill_score: 10,
   passed_score: 5,
+  mark_id:2,
 };
 const writeScore = writeScoreFn(scoreObj);
 const test = async () => {

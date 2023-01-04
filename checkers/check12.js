@@ -11,10 +11,11 @@ let timeOut = setTimeout(() => {
 const scoreObj = {
   skill_point_id: 1804,
   title: "JavaScript、ES6 基础语法",
-  checker: "点击确认选座跳转到详情也”",
+  checker: "点击确认选座跳转",
   user_score: 0,
-  skill_score: 5,
+  skill_score: 10,
   passed_score: 5,
+  markId:1  
 };
 const writeScore = writeScoreFn(scoreObj);
 const test = async () => {

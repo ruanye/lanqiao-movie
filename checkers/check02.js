@@ -12,8 +12,9 @@ const scoreObj = {
   skill_point_id:1808,
   title: "AJAX操作",
   checker: "首页Tab切换",
+  mark_id:3,
   user_score: 0,
-  skill_score: 5,
+  skill_score: 10,
   passed_score: 5,
 };
 const writeScore = writeScoreFn(scoreObj);

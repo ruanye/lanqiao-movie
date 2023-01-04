@@ -12,8 +12,9 @@ const scoreObj = {
   skill_point_id: 1804,
   title: "JavaScript、ES6 基础语法",
   checker: "点击购票跳转至选座页面",
+  mark_id:1,
   user_score: 0,
-  skill_score: 5,
+  skill_score: 10,
   passed_score: 5,
 };
 const writeScore = writeScoreFn(scoreObj);

@@ -13,7 +13,7 @@ let timeOut = setTimeout(() => {
 const scoreObj = {
   skill_point_id: 1798,
   title: "静态页面布局",
-  checker: "订单详情页”的静态布局还原度",
+  checker: "订单详情页的静态布局",
   user_score: 0,
   skill_score: 10,
   passed_score: 10,

@@ -1,6 +1,3 @@
-滚动到底没有加载更多数据
-购买后未跳转到订单详情页
-购买后未跳转到订单详情页
-购买后未跳转到订单详情页
-最多选择6个座位
-未获取到购买按钮
+判题发生了错误，信息如下Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/#/
+判题发生了错误，信息如下Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/#/
+判题发生了错误，信息如下Error: net::ERR_CONNECTION_REFUSED at http://localhost:8080/#/cinemaDetail?movieId=168

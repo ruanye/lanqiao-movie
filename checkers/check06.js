@@ -13,7 +13,8 @@ const scoreObj = {
   title: "AJAX操作",
   checker: "排片列表默认排片数据渲染",
   user_score: 0,
-  skill_score: 5,
+  mark_id:2,
+  skill_score: 10,
   passed_score: 5,
 };
 const writeScore = writeScoreFn(scoreObj);

@@ -18,3 +18,5 @@ const getSeatPosition = (index) => {
 
 
 module.exports = getSeatPosition;
+
+

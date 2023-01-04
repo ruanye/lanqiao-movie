@@ -13,15 +13,15 @@ const scoreObj = {
   title: "JavaScript、ES6 基础语法",
   checker: "首页滚动加载",
   user_score: 0,
-  skill_score: 5,
+  skill_score: 10,
   passed_score: 5,
 };
 const scoreObj2 = {
   skill_point_id: 1808,
-  title: "AJAX 操作",
+  title: "AJAX操作",
   checker: "首页滚动加载",
   user_score: 0,
-  skill_score: 5,
+  skill_score: 10,
   passed_score: 5,
 };
 
@@ -55,7 +55,7 @@ const test = async () => {
   console.log("测试通过");
   clearTimeout(timeOut);
   writeScore(5);
-  writeScore2(5);
+  writeScore2(10);
   await browser.close();
 };
 

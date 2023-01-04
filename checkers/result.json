@@ -1,15 +1,6 @@
 {
   "user_id": null,
   "pass_detail": [
-    {
-      "skill_point_id": 7,
-      "title": "蓝桥电影",
-      "checker": "检测“点击不同日期选项卡后正确渲染”",
-      "user_score": 5,
-      "skill_score": 5,
-      "passed_score": 5,
-      "push_at": 1672817007,
-      "passed": true
-    }
+    
   ]
 }

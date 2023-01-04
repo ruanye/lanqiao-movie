@@ -4,10 +4,11 @@ const { writeScoreFn } = require("../utils/writeScore");
 
 const scoreObj = {
   skill_point_id: 1808,
-  title: "AJAX 操作",
+  title: "AJAX操作",
   checker: "首页正在热映数据渲染",
+  mark_id:2,
   user_score: 0,
-  skill_score: 5,
+  skill_score: 10,
   passed_score: 5,
 };
 

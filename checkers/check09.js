@@ -5,7 +5,7 @@ const scoreObj = {
   title: "JavaScript、ES6 基础语法",
   checker: "座位的选中与显示",
   user_score: 0,
-  skill_score: 5,
+  skill_score: 10,
   passed_score: 5,
 };
 const writeScore = writeScoreFn(scoreObj);
